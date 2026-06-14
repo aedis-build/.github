@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="aedis-mascot-lockup-dark.svg">
-  <img src="aedis-mascot-lockup.svg" alt="Aedis" width="440">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.aedis.build/brand/aedis-mascot-lockup-dark.svg">
+  <img src="https://cdn.aedis.build/brand/aedis-mascot-lockup.svg" alt="Aedis" width="440">
 </picture>
 
 ### A fundação segura para construir serviços .NET orientados a domínio e a eventos.
