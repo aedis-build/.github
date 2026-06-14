@@ -41,6 +41,18 @@ O Aedis é um conjunto de pacotes `Aedis.*` organizados em camadas claras:
 
 Seu código de domínio depende **só de contratos**. Portar entre nuvem, broker ou banco é **trocar um pacote NuGet** no *composition root* — o domínio nem recompila. Chamamos isso de *package-level Dependency Inversion*.
 
+## A arquitetura, sem rótulo único
+
+Dizer só "hexagonal" subvende o Aedis — ele opera em **três níveis**, e hexagonal cobre apenas um:
+
+| Camada | Padrão | No Aedis |
+|---|---|---|
+| **Domínio & fronteiras** | Hexagonal / Ports & Adapters | `*.Abstractions` (portas) ↔ implementações por provider (adaptadores) |
+| **Plataforma & pacotes** | Microkernel / Plug-in | `Aedis.Core` (kernel estável) + plug-ins substituíveis por *package swap* |
+| **Hosting** | Framework IoC / Template Method | `WebApiHost`/`StandaloneApp` invertem o controle e entregam o *golden path* |
+
+> **Hexagonal no domínio, Microkernel na plataforma.** Portabilidade por troca de pacote é o padrão Microkernel — não hexagonal puro. É o que diferencia o Aedis de "qualquer monolito bem-feito": os adaptadores são **plug-ins versionados e publicáveis de forma independente**.
+
 ## Segura **e** portável por construção
 
 Os mesmos princípios que tornam o código seguro também o tornam **independente de nuvem**: domínio no centro, infraestrutura nas bordas, comunicação por eventos. O custo de portar é **pré-pago no design** — toda dependência de infra vive atrás de uma interface agnóstica.
