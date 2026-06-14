@@ -1,0 +1,35 @@
+<svg viewBox="0 0 660 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aedis">
+  <g>
+  <g transform="rotate(33 168 196)">
+    <rect x="146" y="168" width="44" height="74" rx="22" fill="#E7D4A8"/>
+    <path d="M150 182 L186 182 M150 196 L186 196 M150 210 L186 210 M150 224 L186 224 M168 172 L168 238" stroke="#C9B486" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  <ellipse cx="98" cy="220" rx="18" ry="11" fill="#E7D4A8"/>
+  <ellipse cx="142" cy="220" rx="18" ry="11" fill="#E7D4A8"/>
+  <ellipse cx="120" cy="170" rx="60" ry="56" fill="#1A2740"/>
+  <ellipse cx="120" cy="176" rx="40" ry="42" fill="#E7D4A8"/>
+  <ellipse cx="120" cy="98" rx="74" ry="68" fill="#1A2740"/>
+  <circle cx="66" cy="50" r="15" fill="#1A2740"/>
+  <circle cx="174" cy="50" r="15" fill="#1A2740"/>
+  <circle cx="66" cy="50" r="7" fill="#E7D4A8"/>
+  <circle cx="174" cy="50" r="7" fill="#E7D4A8"/>
+  <circle cx="96" cy="94" r="15" fill="#FFFFFF"/>
+  <circle cx="144" cy="94" r="15" fill="#FFFFFF"/>
+  <circle cx="99" cy="97" r="8" fill="#141B2E"/>
+  <circle cx="141" cy="97" r="8" fill="#141B2E"/>
+  <circle cx="102" cy="93" r="3" fill="#FFFFFF"/>
+  <circle cx="144" cy="93" r="3" fill="#FFFFFF"/>
+  <ellipse cx="120" cy="124" rx="33" ry="25" fill="#F2E6C7"/>
+  <ellipse cx="92" cy="128" rx="7" ry="5" fill="#E6A36B" opacity="0.45"/>
+  <ellipse cx="148" cy="128" rx="7" ry="5" fill="#E6A36B" opacity="0.45"/>
+  <ellipse cx="120" cy="111" rx="9" ry="6.5" fill="#141B2E"/>
+  <rect x="110" y="119" width="9.5" height="19" rx="3.5" fill="#FFFFFF" stroke="#D8CBA8" stroke-width="1"/>
+  <rect x="120.5" y="119" width="9.5" height="19" rx="3.5" fill="#FFFFFF" stroke="#D8CBA8" stroke-width="1"/>
+  <circle cx="86" cy="172" r="14" fill="#1A2740"/>
+  <circle cx="154" cy="172" r="14" fill="#1A2740"/>
+  <rect x="100" y="154" width="40" height="36" rx="5" fill="#C8A24C"/>
+  <rect x="100" y="154" width="40" height="12" rx="5" fill="#DCBE74"/>
+  <rect x="100" y="162" width="40" height="3.5" fill="#B08C3A" opacity="0.5"/>
+  </g>
+  <text x="276" y="160" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="108" font-weight="600" letter-spacing="2" fill="#ECE5D5">Aedis</text>
+</svg>
