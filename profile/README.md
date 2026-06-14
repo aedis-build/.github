@@ -11,7 +11,7 @@
 
 <br>
 
-<img src="https://img.shields.io/badge/.NET-10.0-C8A24C?style=flat-square&labelColor=1A2740&logo=dotnet&logoColor=ECE5D5" alt=".NET 10">
+<img src="https://img.shields.io/badge/-10%20LTS-C8A24C?style=flat-square&labelColor=1A2740&logo=dotnet&logoColor=ECE5D5" alt=".NET 10 LTS">
 <img src="https://img.shields.io/badge/cloud--portable-by%20design-1A2740?style=flat-square&labelColor=1A2740" alt="cloud-portable by design">
 <img src="https://img.shields.io/badge/polycloud-ready-1A2740?style=flat-square&labelColor=1A2740" alt="polycloud-ready">
 <img src="https://img.shields.io/badge/secure-by%20construction-1A2740?style=flat-square&labelColor=1A2740" alt="secure by construction">
