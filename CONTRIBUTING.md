@@ -47,6 +47,18 @@ docs(readme): ajusta exemplo de quickstart
 
 Tipos comuns: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`.
 
+## CI, release e deploy pela plataforma
+
+Os workflows de todo repositório da organização são chamadas finas aos reutilizáveis do [aedis-platform](https://github.com/aedis-build/aedis-platform), pinadas por SHA:
+
+- `aedis-ci.yml`: o único caller do pipeline de qualidade (commits, testes e cobertura, SAST, CodeQL, REUSE e DAST);
+- `gate.yml`: chama o `merge-gate.yml`;
+- release e deploy: `release-nuget.yml`, `release-chart.yml`, `build-image.yml`, `deploy-static.yml`.
+
+No repositório fica só o que o GitHub não deixa reutilizar: o `scorecard.yml`, porque o Scorecard só publica a partir de um workflow do próprio repositório, e o job que decide a versão antes de chamar a release.
+
+**Faltou algo na plataforma?** Abra uma issue no aedis-platform e implemente lá, e o repositório passa a chamar o reutilizável novo. Não escreva o job direto no repositório, nem como paliativo. Um job local fica fora do pin revisado, da atestação feita pela plataforma e das correções de segurança que ela recebe.
+
 ## Padrões de código
 
 - **Respeite a regra de dependência.** Código de domínio e aplicação referencia **apenas** contratos (`Aedis.Core`, `Aedis.*.Abstractions`); somente o *host*/*composition root* referencia implementações concretas (`Aedis.*.<Provider>`). Não acople o domínio à infraestrutura — é o que torna a portabilidade um *package swap*.
