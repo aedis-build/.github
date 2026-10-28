@@ -35,6 +35,23 @@ dotnet test
 5. Garanta que `dotnet build` e `dotnet test` passam localmente.
 6. Abra o PR com uma descrição clara do *quê* e do *porquê*.
 
+### Lotes de mudanças: sem pilha de PRs
+
+Os repositórios só aceitam merge por squash e exigem o branch atualizado com a `main` antes do merge. Numa pilha de
+PRs (cada um sobre o branch do anterior), isso tem um custo alto. Cada merge vira um commit novo na `main`, e os PRs
+de cima passam a carregar os commits antigos. Na prática, cada PR seguinte entra em conflito, precisa de atualização,
+roda o CI completo de novo e perde a aprovação.
+
+- **Um lote (várias issues relacionadas) é um PR só.** Abra um branch a partir da `main` com um commit por issue
+  (`fix(chat): …`, `fix(forms): …`) e um PR que fecha todas elas (`Closes #N` por issue). O corpo traz uma seção por
+  issue, com o que mudou, os testes e as decisões, para a revisão ser feita em partes.
+- **PRs separados só quando forem independentes:** cada um a partir da `main` e sem mexer nos mesmos arquivos.
+  Assim eles podem ser mergeados em qualquer ordem.
+- **Se uma pilha já existe,** não mergeie peça por peça. Atualize o PR do topo com a `main` uma vez, aponte-o para a
+  `main`, mergeie só ele e feche os de baixo como "incluído em #N". Trocar a base de um PR não dispara o CI.
+- O CI roda uma vez por PR: um push novo, ou o merge, cancela a execução anterior (`concurrency` nos callers do
+  `aedis-ci`).
+
 ## Padrões de commit
 
 Usamos [Conventional Commits](https://www.conventionalcommits.org/):
